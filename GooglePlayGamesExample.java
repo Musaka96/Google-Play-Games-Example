@@ -207,6 +207,7 @@ public class GooglePlayGames {
     }
 
     private static void signOut() {
+        _signedInAcc = null;
         GoogleSignInClient signInClient = GoogleSignIn.getClient(MainActivity._Instance,
                 GoogleSignInOptions.DEFAULT_GAMES_SIGN_IN);
         signInClient.signOut().addOnCompleteListener(MainActivity._Instance,
